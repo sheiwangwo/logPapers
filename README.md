@@ -20,64 +20,64 @@ NanoLog通过将工作从运行时热路径转移到应用程序的编译和执�
  - [ATC 18--Troubleshooting Transiently-Recurring Errors in Production Systems with Blame-Proportional Logging](./paper/twoYears/CHI_18_Leveraging%20Community-Generated%20Videos%20and%20Command%20Logs%20to%20Classify%20and%20Recommend%20Software%20Workflows.pdf)<br>
 生产系统中暂时性重复问题，很少发生难以检测排除。使用轻量级触发器来识别问题的第一次出现，然后使用它的递归执行过失比例日志记录。
 
- - [CHI 18--Leveraging Community-Generated Videos and Command Logs to Classify and Recommend Software Workflows]
+ - [CHI 18--Leveraging Community-Generated Videos and Command Logs to Classify and Recommend Software Workflows](./paper/twoYears/FSE-ESEC_18_CloudRaid-%20hunting%20concurrency%20bugs%20in%20the%20cloud%20via%20log-mining.pdf)<br>
 复杂软件的用户工作流不是最佳，基于操作视频（带指令）和日志语料库对工作流分类，并进行推荐。
 
- - [FSE-ESEC 18--CloudRaid: Hunting Concurrency Bugs in the Cloud via Log-Mining]
+ - [FSE-ESEC 18--CloudRaid: Hunting Concurrency Bugs in the Cloud via Log-Mining](./paper/twoYears/FSE-ESEC_18_CloudRaid-%20hunting%20concurrency%20bugs%20in%20the%20cloud%20via%20log-mining.pdf)<br>
 分布式并发bug难检测且代价大。提出充分测试的消息排序（部分乱序）可能暴露错误，翻转每一对消息，评估是否可能并行，来测试并行bug。
 
- - [FSE-ESEC 18--Identifying Impactful Service System Problems via Log Analysis]
+ - [FSE-ESEC 18--Identifying Impactful Service System Problems via Log Analysis](./paper/twoYears/FSE-ESEC_18_Identifying%20impactful%20service%20system%20problems%20via%20log%20analysis.pdf)<br>
 日志数据量大且有分类需求，聚类以及手工验证困难。提出新的层叠聚类算法，通过迭代采样、聚类和匹配日志序列，在保持较高精度的同时，大大节省了聚类时间。
 
- - [FSE-ESEC 18--Using Finite-State Models for Log Differencing]
+ - [FSE-ESEC 18--Using Finite-State Models for Log Differencing](./paper/twoYears/FSE-ESEC_18_Using%20finite-state%20models%20for%20log%20differencing.pdf)<br>
 探究不同版本系统的差异性，可以分析已经消除或引入的bug或新功能，以及进行恶意软件的分析。通过日志建立优先状态模型，比较软件版本的差异性。使用2KDIFF比较两个日志之间和nKDIFF输出FSM比较多个日志
 
- - [HPCA 18--Steal but No Force: Efficient Hardware Undo+Redo Logging for Persistent Memory Systems]
+ - [HPCA 18--Steal but No Force: Efficient Hardware Undo+Redo Logging for Persistent Memory Systems](./paper/twoYears/HPCA_18_Steal%20but%20No%20Force%20Efficient%20Hardware%20Undo+Redo%20Logging%20for%20Persistent%20Memory%20Systems.pdf)<br>
 由于性能和能量开销，在持久内存中采用传统的软件日志记录机制非常昂贵。提出了一个硬件撤销+重做日志记录方案，该方案通过利用商品缓存中使用的写回和写分配策略来维护数据持久性。
 
- - [INFOCOM 18--ADELE: Anomaly Detection from Event Log Empiricism]
-结合计数器和日志文件，利用机器学习技术，发现系列小故障预警大故障
+ - [INFOCOM 18--ADELE: Anomaly Detection from Event Log Empiricism](./paper/twoYears/INFOCOM_18_ADELE-%20Anomaly%20Detection%20from%20Event%20Log%20Empiricism.pdf)<br>
+结合计数器和日志文件，利用机器学习技术，发现系列小故障预警大故障.
 
- - [NDSS 18-- Fear and Logging in the Internet of Things]
+ - [NDSS 18-- Fear and Logging in the Internet of Things](./paper/twoYears/NDSS_18_Fear%20and%20Logging%20in%20the%20Internet%20of%20Things.pdf)<br>
 家庭场景物联网攻击调查很重要，日志的设备隔离和设备的各异导致困难。提出了ProvThings，一种以平台为中心的方法来实现物联网中的集中审计，它对物联网应用程序和设备api执行高效的自动化检测得到数据，腿短依赖关系重建事件，最终可面向消费者。
 
- - [NDSS 18--MCI: Modeling-based Causality Inference in Audit Logging for Attack Investigation]
+ - [NDSS 18--MCI: Modeling-based Causality Inference in Audit Logging for Attack Investigation](./paper/twoYears/NDSS_18_MCI%20-%20Modeling-based%20Causality%20Inference%20in%20Audit%20Logging%20for%20Attack%20Investigation.pdf)<br>
 提出解决因果分析导致的依赖爆炸，主要依靠插装和修改内核增强收集。不用其他额外操作，直接对日志进行建模，each model is a sequence of system calls that have inter-dependences, some of them caused by memory operations and hence implicit at the system call level.
 
- - [NDSS 18--Towards a Timely Causality Analysis for Enterprise Security]
+ - [NDSS 18--Towards a Timely Causality Analysis for Enterprise Security](./paper/twoYears/NDSS_18_Towards%20a%20Timely%20Causality%20Analysis%20for%20Enterprise%20Security.pdf)<br>
 日志因果分析的时效性要求高，之前却被忽视。提出前向后向因果追踪，并在攻击图的构建调查中引入优先级（基于因果关系图的稀疏性和拓扑特征计算因果关系优先级），时间上提升两个数量级。
 
- - [NSDI 18-Prophecy: Accelerating Mobile Page Loads Using Final-state Write Logs]
+ - [NSDI 18-Prophecy: Accelerating Mobile Page Loads Using Final-state Write Logs](./paper/twoYears/NSDI_18_Prophecy-%20Accelerating%20Mobile%20Page%20Loads%20Using%20Final-state%20Write%20Logs.pdf)<br>
 移动设备浏览网页耗费较多带宽和电量，需要移动页面加速技术。通过服务器返回的“write-log”预测提前生成web页面的结构数据，来优化移动页面加载的时间、能源和带宽。
 
- - [OSDI 18--The FuzzyLog: A Partially Ordered Shared Log]
+ - [OSDI 18--The FuzzyLog: A Partially Ordered Shared Log](./paper/twoYears/OSDI_18_The%20FuzzyLog-%20A%20Partially%20Ordered%20Shared%20Log.pdf)<br>
 The FuzzyLog is a partially ordered shared log abstraction. FuzzyLog applications obtain the benefits of an underlying shared log – extracting strong consistency, durability, and failure atomicity in simple ways.
 
- - [SIGIR 18--LogCanvas: Visualizing Search History Using Knowledge Graphs]
+ - [SIGIR 18--LogCanvas: Visualizing Search History Using Knowledge Graphs](./paper/twoYears/SIGIR_18_LogCanvas-%20Visualizing%20Search%20History%20Using%20Knowledge%20Graphs.pdf)<br>
 一个用于用户搜索历史可视化的平台,帮助用户重新构建搜索活动之间的语义关系，其知识图由每个搜索查询发现的最重要的概念或实体及其关系组成。有助于信息的重新查找，搜索历史记录还有助于协作搜索。
 
- - [SIGIR 18--Online Job Search: Study of Users' Search Behavior using Search Engine Query Logs]
+ - [SIGIR 18--Online Job Search: Study of Users' Search Behavior using Search Engine Query Logs](./paper/twoYears/SIGIR_18_Online%20Job%20Search-%20Study%20of%20Users'%20Search%20Behavior%20using%20Search%20Engine%20Query%20Logs.pdf)<br>
 利用搜索引擎查询日志，探讨了在线求职的不同特点及其与一般搜索的不同之处。我们的实验结果表明，工作搜索具有特定的属性，可以被搜索引擎用来提高搜索结果的质量。
 
- - [SIGMOD 18--Navigating the Data Lake with Datamaran: Automatically Extracting Structure from Log Datasets]
+ - [SIGMOD 18--Navigating the Data Lake with Datamaran: Automatically Extracting Structure from Log Datasets](./paper/twoYears/SIGMOD_18_Navigating%20the%20Data%20Lake%20with%20DATAMARAN-%20Automatically%20Extracting%20Structure%20from%20Log%20Datasets.pdf)<br>
 企业积累的大量日志数据成为数据池。未使用、非结构化和未解释的状态，随着它们的积累，使得它们变得不可管理。提出一个从半结构化日志数据集中提取结构的工具，不需要人工监视，将结构化部分（根据不同部分的字段和记录端点得到统一的部分日志，并提取其中的值进行结构化）从非结构化噪声或格式中分离出来。
 
- - [SIGMOD 18--RDSQ: Reliable Queue Protocol over Shared Logs]
+ - [SIGMOD 18--RDSQ: Reliable Queue Protocol over Shared Logs](./paper/twoYears/SIGMOD_18_RDSQ-%20Reliable%20Queue%20Protocol%20over%20Shared%20Logs.pdf)<br>
 随着面向消息的中间件作为分布式系统中组件间通信的解决方案的日益普及，在进程崩溃和网络分区等故障场景下设，本文设计并实现一个共享消息队列协议，利用了共享日志服务提供的通信和复制协议。该协议具有高度一致性和持久性，能够容忍客户机故障。
 
- - [VLDB 18--Query Fresh: Log Shipping on Steroids]
+ - [VLDB 18--Query Fresh: Log Shipping on Steroids](./paper/twoYears/VLDB_18_Query%20Fresh-%20Log%20Shipping%20on%20Steroids.pdf)<br>(./paper/twoYears/VLDB_18_Query%20Fresh-%20Log%20Shipping%20on%20Steroids.pdf)<br>
 热备份的安全（需要备份）和最新（需要快速更新重放）的需求一直冲突。提出高效的日志传送方案，它利用NVRAM和RDMA的异步特性，轻松地将网络I/O和重放排除在关键路径之外。并追加存储，设计并行重放方案。保持高性能同时，保持最新。
 
- - [VLDB 18--Scalable Database Logging for Multicores]
+ - [VLDB 18--Scalable Database Logging for Multicores](./paper/twoYears/VLDB_18_Scalable%20Database%20Logging%20for%20Multicores.pdf)<br>
 中央日志存储中的缓冲日志最近面临着一个严重的多核可伸缩性问题，日志刷新受到同步I/O延迟的挑战。设计并实现了一种快速且可伸缩的日志记录方法ELEDA，它可以平稳地将大量事务日志从易失性内存转移到稳定的存储，而不会带来原子性和持久性的风险。ELEDA的核心是一个高度并发的数据结构
 
- - [VLDB 18--SQL Statement Logging for Making SQLite Truly Lite]
+ - [VLDB 18--SQL Statement Logging for Making SQLite Truly Lite](./paper/twoYears/VLDB_18_SQL%20Statement%20Logging%20for%20Making%20SQLite%20Truly%20Lite.pdf)<br>
 SQLite由于其轻量在移动设备中受欢迎，但其中的写IO成本，由于logging策略，并不是轻量级的。首先利用非易失性内存(NVM)使逻辑日志实现其全部潜力的工作:可以使用字节寻址的NVM快速编写细粒度逻辑日志，而不需要标准I/O堆栈的开销。结合其他策略将日志性能提高一个数量级。
 
- - [WWW 18--Detecting Absurd Conversations from Intelligent Assistant Logs by Exploiting User Feedback Utterances]
+ - [WWW 18--Detecting Absurd Conversations from Intelligent Assistant Logs by Exploiting User Feedback Utterances](./paper/twoYears/WWW_18_Detecting%20Absurd%20Conversations%20from%20Intelligent%20Assistant%20Logs%20by%20Exploiting%20User%20Feedback%20Utterances.pdf)<br>
 为了提高智能助手的转换能力。从日志中提取一些荒谬/可理解的对话，从而训练一个会话分类器，将日志中记录的所有对话分类为荒谬或不荒谬。
 
- - [WWW 18--Discovering Progression Stages in Trillion-Scale Behavior Logs]
+ - [WWW 18--Discovering Progression Stages in Trillion-Scale Behavior Logs](./paper/twoYears/WWW_18_Discovering%20Progression%20Stages%20in%20Trillion-Scale%20Behavior%20Logs.pdf)<br>
 研究入户在web服务中的行为阶段，提出概率模型，有利于制定业务策略。模型中的每个阶段的特征是操作类型、操作频率和下一步移动的概率分布。并且可在MapReduce框架中处理pb级别数据和万亿次操作。
 
  - [ATC 10--Mining Invariants from Console Logs for System Problem Detection]
