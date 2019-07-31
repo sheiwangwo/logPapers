@@ -5,10 +5,10 @@
  - [ASE 18--An Automated Approach to Estimating Code Coverage Measures via Execution Logs](./paper/twoYears/ASE_18_An%20automated%20approach%20to%20estimating%20code%20coverage%20measures%20via%20execution%20logs.pdf)<br>
 代码覆盖率重要但仅在单元测试和集成测试使用。关注分布式部署和性能开销，使用程序分析技术，从代码中提取log相关的执行路径，在日志文件中检索来评估代码覆盖率。
 
- - ASE 18--Characterizing the Natural Language Descriptions in Software Logging Statements
+ - [ASE 18--Characterizing the Natural Language Descriptions in Software Logging Statements](./paper/twoYears/ASE_18_Characterizing%20the%20natural%20language%20descriptions%20in%20software%20logging%20statements.pdf)<br>
 关注日志质量和日志语句构建中存在的问题，探究日志中repetitiveness和n-gram model，以及演示日志描述的全局重复性来自动生成日志。
 
- - ATC 18--Closing the Performance Gap Between Volatile and Persistent Key-Value Stores Using Cross-Referencing Logs
+ - [ATC 18--Closing the Performance Gap Between Volatile and Persistent Key-Value Stores Using Cross-Referencing Logs](./paper/twoYears/ATC_18_Closing%20the%20Performance%20Gap%20Between%20Volatile%20and%20Persistent%20Key-Value%20Stores%20Using%20Cross-Referencing%20Logs.pdf)<br>
 使用cross-referencing logs(CRLs)，对持久内存优化K-V存储的性能。
 
  - ATC 18--Kernel-Supported Cost-Effective Audit Logging for Causality Tracking
