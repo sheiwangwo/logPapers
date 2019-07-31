@@ -80,62 +80,62 @@ SQLite由于其轻量在移动设备中受欢迎，但其中的写IO成本，由
  - [WWW 18--Discovering Progression Stages in Trillion-Scale Behavior Logs](./paper/twoYears/WWW_18_Discovering%20Progression%20Stages%20in%20Trillion-Scale%20Behavior%20Logs.pdf)<br>
 研究入户在web服务中的行为阶段，提出概率模型，有利于制定业务策略。模型中的每个阶段的特征是操作类型、操作频率和下一步移动的概率分布。并且可在MapReduce框架中处理pb级别数据和万亿次操作。
 
- - [ATC 10--Mining Invariants from Console Logs for System Problem Detection]
+ - [ATC 10--Mining Invariants from Console Logs for System Problem Detection](./paper/4+4/ATC_10_Mining%20Invariants%20from%20Console%20Logs%20for%20System%20Problem%20Detection.pdf)<br>
 一种用于异常检测的非结构化日志分析技术，提出了一种自动发现日志中程序不变量的新算法。程序不变量可以从系统的各个方面定义，包括系统度量值(例如CPU和网络利用率)和程序变量（如job id），对其计数建立线性关系检测异常。
 
- - [ATC 11--In-situ MapReduce for Log Processing]
+ - [ATC 11--In-situ MapReduce for Log Processing](./paper/4+4/ATC_11_In-situ%20MapReduce%20for%20Log%20Processing.pdf)<br>
 处理商用点击日志，机器和日志规模巨大。转移数据到单独的HDFS集群运行MapReduce作业，有IO和时间上的巨大花费求。分析转移到日志服务器本身的就地MapReduce(iMR)体系结构可节约上述，但服务器又其他任务，分析资源受限延迟不可保障。使用连续MapReduce model，有损MapReduce 处理，架构上分布式流处理器、子窗口或者panes。
 
- - [ATC 15--Log2: A Cost-Aware Logging Mechanism for Performance Diagnosis]
+ - [ATC 15--Log2: A Cost-Aware Logging Mechanism for Performance Diagnosis](./paper/4+4/ATC_15_Log2-%20A%20Cost-Aware%20Logging%20Mechanism%20for%20Performance%20Diagnosis.pdf)<br>
 开发人员预先定义了允许日志记录的资源预算（日志带宽），在运行时日志系统决定是否进行日志记录。两段过滤：一评分（如差异性）删除条目，二评分动态调整输出。
 
- - [CCS 11--Policy Auditing over Incomplete Logs: Theory, Implementation and Applications]
+ - [CCS 11--Policy Auditing over Incomplete Logs: Theory, Implementation and Applications](./paper/4+4/CCS_11_Policy%20auditing%20over%20incomplete%20logs-%20theory,%20implementation%20and%20applications.pdf)<br>
 设计并实现了一种算法reduce，用于检查审计日志是否符合丰富的隐私和安全策略。reduce对以一阶逻辑表示的策略进行操作，该逻辑允许在无限域上进行有限的量化；对于日志的不完备性，多次迭代，在每个迭代中，可以证明它在当前日志上检查了尽可能多的策略，并输出了一个仅当日志包含额外信息时才可以检查的剩余策略。
 
- - [CCS 13--LogGC: Garbage Collecting Audit Log]
+ - [CCS 13--LogGC: Garbage Collecting Audit Log](./paper/4+4/CCS_13_LogGC-Garbage%20Collecting%20Audit%20Log.pdf)<br>
 审计日志的取证的一个关键挑战是生成的日志文件的大小。一个关键的观察:审计日志中的许多事件条目可以删除，而不会影响将来的法医分析(如因果图)。开发了一个基本的GC算法，它直接作用于审计日志，获取当前的审计日志并生成一个新的和减少的审计日志。
 
- - [CCS 14--POSTER: Scanning-free Personalized Malware Warning System by Learning Implicit Feedback from Detection Logs]
+ - [CCS 14--POSTER: Scanning-free Personalized Malware Warning System by Learning Implicit Feedback from Detection Logs](./paper/4+4/CCS_14_POSTER-%20Scanning-free%20Personalized%20Malware%20Warning%20System%20by%20Learning%20Implicit%20Feedback%20from%20Detection%20Logs.pdf)<br>
 传统的反恶意软件系统通过扫描文件系统来检测此类恶意软件，并为用户提供安全的环境。缺点:耗时;某些设置未检测到;警告系统可以在不扫描的情况下检测到未受感染的恶意软件，并具有很高的感染风险。提出了一种基于检测日志和协同过滤(CF)算法的恶意软件检测方法。
 
- - [CCS 14--VerSum: Verifiable Computations over Large Public Logs]
+ - [CCS 14--VerSum: Verifiable Computations over Large Public Logs](./paper/4+4/CCS_14_VerSum-Verifiable%20Computations%20over%20Large%20Public%20Logs.pdf)<br>
 计算外包需要可验证性。VERSUM客户机通过比较来自多个服务器的输出来确保输出是正确的。关键思想：将计算表示为一个函数程序，允许对以前的结果进行记忆；将功能程序的评估轨迹记录在计算历史中，识别服务器出错；引入一种新的经过身份验证的数据结构。
 
- - [CCS 16--Poster:Toward Automating the Generation of Malware Analysis Reports Using the Sandbox Logs]
+ - [CCS 16--Poster:Toward Automating the Generation of Malware Analysis Reports Using the Sandbox Logs](./paper/4+4/CCS_16_POSTER-%20Toward%20Automating%20the%20Generation%20of%20Malware%20Analysis%20Reports%20Using%20the%20Sandbox%20Logs.pdf)<br>
 恶意软件的新例子不断增加，日志报告语义不可读。ReGenerator通过使用安全公司发布的现有报告，自动生成将沙箱日志生成相近于公司报告的可读内容。
 
- - [CCS 17--DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning]
+ - [CCS 17--DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning](./paper/4+4/CCS_17_DeepLog-Anomaly%20Detection%20and%20Diagnosis%20from%20System%20Logs%20through%20Deep%20Learning.pdf)<br>
 数据众多，且异常检测越来越有挑战性。提出利用长短时记忆(LSTM)对系统日志进行自然语言序列建模的深度神经网络模型DeepLog。使用日志键和其他度量值，小数据训练，可实时反馈调整。
 
- - [EuroSys 06—Predictive Log-Synchronization]
+ - [EuroSys 06—Predictive Log-Synchronization](./paper/4+4/EuroSys_06_Predictive%20log-synchronization.pdf)<br>
 为了简化并发数据结构的设计，提出了预测日志同步作为软件事务内存处理的替代模式。它可以通过显著降低并发操作之间的协调开销来提高只读吞吐量，并提供了一种简化并发数据结构的方法。
 
- - [EuroSys 07--Antiquity: Exploiting a Secure Log for Wide-Area Distributed Storage]
+ - [EuroSys 07--Antiquity: Exploiting a Secure Log for Wide-Area Distributed Storage](./paper/4+4/EuroSys_07_Antiquity-%20exploiting%20a%20secure%20log%20for%20wide-area%20distributed%20storage.pdf)<br>
 设计假定所有服务器最终都会失败，并尝试在这些失败的情况下维护数据。ancient使用安全日志来维护数据完整性，在多个服务器上复制每个日志，以确保持久性，并使用动态拜占庭故障olerant quorum协议来确保副本之间的一致性。
 
- - [EuroSys 07--Fine Grained Kernel Logging with KLogger: Experience and Insights]
+ - [EuroSys 07--Fine Grained Kernel Logging with KLogger: Experience and Insights](./paper/4+4/EuroSys_07_Fine%20grained%20kernel%20logging%20with%20KLogger-%20experience%20and%20insights.pdf)<br>
 系统的复杂性、并行性，已难以令人理解。KLogger利用框架可以使用事件配置文件专门针对特定的子系统，从而在内核编译时生成特定于事件的代码。得到细粒度的、可伸缩的、高度灵活的内核日志程序。帮助开发者理解系统的运行。
 
- - [EuroSys 17--Online Reconstruction of Structural Information from Datacenter Logs]
+ - [EuroSys 17--Online Reconstruction of Structural Information from Datacenter Logs](./paper/4+4/EuroSys_17_Online%20Reconstruction%20of%20Structural%20Information%20from%20Datacenter%20Logs.pdf)<br>
 数据中心管理和诊断的任务中，事务重构的需求，却面对大规模脱机文件，需要定制代码等难题。提出大型数据中心日志记录基础设施中实时恢复结构信息(会话、跨度、调用图、事务树等)的系统TS，它具有低延迟，仅使用少量计算资源。流程：重新排序，重构会话，统计利用模版，实时数据流建图。
 
- - [OSDI 02--ReVirt: Enabling Intrusion Analysis through Virtual-Machine Logging and Replay]
+ - [OSDI 02--ReVirt: Enabling Intrusion Analysis through Virtual-Machine Logging and Replay](./paper/4+4/OSDI_02_ReVirt-%20Enabling%20Intrusion%20Analysis%20Through%20Virtual-Machine%20Logging%20and%20Replay.pdf)<br>
 ReVirt通过将目标操作系统移动到虚拟机并在虚拟机下面进行日志记录，从而消除了对目标操作系统的依赖。还能够重播虚拟机的完整的逐条指令执行，即使执行依赖于非确定性事件。日志程序与操作系统在不同的域中运行，修改主机内核来记录虚拟机。
 
- - [OSDI 12--Be Conservative: Enhancing Failure Diagnosis with Proactive Logging]
+ - [OSDI 12--Be Conservative: Enhancing Failure Diagnosis with Proactive Logging](./paper/4+4/OSDI_12_Be%20Conservative-%20Enhancing%20Failure%20Diagnosis%20with%20Proactive%20Logging.pdf)<br>
 在5个系统的调查中发现超过一半的故障中没有记录可检测到的错误，缺少故障相关的错误会导致时候调查费时费力。自动化在代码中插入主动日主语句，以强化故障诊断。它通过在源代码中机械地搜索表5中的七个通用异常模式来识别潜在的异常。
 
- - [SOSP 09--Detecting Large-Scale System Problems by Mining Console Logs]
+ - [SOSP 09--Detecting Large-Scale System Problems by Mining Console Logs](./paper/4+4/SOSP_09_Detecting%20large-scale%20system%20problems%20by%20mining%20console%20logs.pdf)<br>
 控制台日志未能充分运用，其特点large、 unstructed，需要自动化处理检测异常。结合代码，将控制台日志结构化，选取时间和对象的特征，进行异常检测。代码生成模板，tostring函数填入，与log进行检索得到structured log，时间特征和对象识别建立向量，pca异常检测，将结果可视化为可理解的判断树结构
 
- - [SOSP 13--Tango: Distributed Data Structures over a Shared Log]
+ - [SOSP 13--Tango: Distributed Data Structures over a Shared Log](./paper/4+4/SOSP_13_Tango-%20distributed%20data%20structures%20over%20a%20shared%20log.pdf)<br>
 分布式系统缺少用于存储和访问元数据的类似抽象。为开发人员提供了由共享日志支持的复制的内存数据结构(如映射或树)的抽象。通过简单的附加和读取操作复制共享日志上的状态，而不是复杂的分布式协议;在此过程中，它们从共享日志中获得线性化、持久性和高可用性等特性。
 
- - [SOSP 17--Log20: Fully Automated Optimal Placement of Log Printing Statements under Specified Overhead Threshold]
+ - [SOSP 17--Log20: Fully Automated Optimal Placement of Log Printing Statements under Specified Overhead Threshold](./paper/4+4/SOSP_17_Log20-%20Fully%20Automated%20Optimal%20Placement%20of%20Log%20Printing%20Statements%20under%20Specified%20Overhead%20Threshold.pdf)<br>
 在指定数量的性能开销的约束下，确定代码中日志打印语句的接近最优位置。优选取上，位置在程序所采用的不同执行路径之间的区分能力来度量它的信息化程度，消除路径歧义方面。指标为信息熵（如果路径越不可预测，那么熵也就越大）和运行路径统计频率。
 
- - [SOSP 17--Scaling a file system to many cores using an operation log]
+ - [SOSP 17--Scaling a file system to many cores using an operation log](./paper/4+4/SOSP_17_Scaling%20a%20file%20system%20to%20many%20cores%20using%20an%20operation%20log.pdf)<br>
 文件系统中同时实现多核可伸缩性和高磁盘吞吐量是一个具有挑战性的问题。使用每个内核的操作日志将内存中的文件系统与磁盘上的文件系统解耦。这种设计便于为内存表示使用高度并发的数据结构，它允许交换操作在没有缓存冲突的情况下进行，因此可以完美地伸缩。
 
- - [Usenix security 09-- Efficient Data Structures for Tamper-Evident Logging]
+ - [Usenix security 09-- Efficient Data Structures for Tamper-Evident Logging](./paper/4+4/USENIX%20Security_09_Efficient%20Data%20Structures%20For%20Tamper-Evident%20Logging.pdf)<br>
 日志的真实可用性在很多场景是强需求。开发了一种新的篡改明显的日志设计，它基于一种新的Merkle树数据结构，允许日志记录器生成其正确行为的简洁证明。提出了Merkle aggregation，它允许以可验证的方式将这些属性从叶子聚合到树的根。
