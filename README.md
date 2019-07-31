@@ -2,7 +2,7 @@
 此处列近两年各个方向较好的会议，和2000年以后四大、四个系统会议上的log相关文章。
 ---------
 
- - [ASE 18--An Automated Approach to Estimating Code Coverage Measures via Execution Logs](./paper/twoYears/ASE_18_An%20automated%20approach%20to%20estimating%20code%20coverage%20measures%20via%20execution%20logs.pdf)\n
+ - [ASE 18--An Automated Approach to Estimating Code Coverage Measures via Execution Logs](./paper/twoYears/ASE_18_An%20automated%20approach%20to%20estimating%20code%20coverage%20measures%20via%20execution%20logs.pdf)<br>
 代码覆盖率重要但仅在单元测试和集成测试使用。关注分布式部署和性能开销，使用程序分析技术，从代码中提取log相关的执行路径，在日志文件中检索来评估代码覆盖率。
 
  - ASE 18--Characterizing the Natural Language Descriptions in Software Logging Statements
