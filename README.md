@@ -39,7 +39,7 @@ NanoLog通过将工作从运行时热路径转移到应用程序的编译和执�
 结合计数器和日志文件，利用机器学习技术，发现系列小故障预警大故障.
 
  - [NDSS 18-- Fear and Logging in the Internet of Things](./paper/twoYears/NDSS_18_Fear%20and%20Logging%20in%20the%20Internet%20of%20Things.pdf)<br>
-家庭场景物联网攻击调查很重要，日志的设备隔离和设备的各异导致困难。提出了ProvThings，一种以平台为中心的方法来实现物联网中的集中审计，它对物联网应用程序和设备api执行高效的自动化检测得到数据，腿短依赖关系重建事件，最终可面向消费者。
+家庭场景物联网攻击调查很重要，日志的设备隔离和设备的各异导致困难。提出了ProvThings，一种以平台为中心的方法来实现物联网中的集中审计，它对物联网应用程序和设备api执行高效的自动化检测得到数据，推断依赖关系重建事件，最终可面向消费者。
 
  - [NDSS 18--MCI: Modeling-based Causality Inference in Audit Logging for Attack Investigation](./paper/twoYears/NDSS_18_MCI%20-%20Modeling-based%20Causality%20Inference%20in%20Audit%20Logging%20for%20Attack%20Investigation.pdf)<br>
 提出解决因果分析导致的依赖爆炸，主要依靠插装和修改内核增强收集。不用其他额外操作，直接对日志进行建模，each model is a sequence of system calls that have inter-dependences, some of them caused by memory operations and hence implicit at the system call level.
