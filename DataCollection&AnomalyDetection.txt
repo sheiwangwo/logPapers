@@ -1,63 +1,111 @@
 数据收集
 (Xu)CCS 18--NodeMerge: Template Based Efficient Data Reduction For Big-Data Causality Analysis.
-(Xu)CCS 16--High Fidelity Data Reduction for Big Data Security Dependency Analyses. The 23rd ACM Conference on Computer and Communications Security.
+为应对apt攻击，建立监视审计系统，但产生的数据量过大。需要减少数据同时保持因果分析质量，本文提出了基于模板的在线系统事件存储数据压缩系统NodeMerge。可以直接处理系统依赖数据流，并根据其访问模式实现对只读文件事件的数据缩减。
+(Xu)CCS 16--High Fidelity Data Reduction for Big Data Security Dependency Analyses. 
+APT攻击复杂隐秘伴随噪音数据，跨时间的方案导致大量的审计事件，导致巨大挑战。利用系统事件之间的依赖性来减少日志条目的数量，同时仍然支持高质量的取证分析。首先提出了一种聚合算法，在数据缩减期间保留事件的依赖性，以确保取证分析的高质量；然后提出了一种主动约简算法，利用领域知识进行进一步的数据约简。
 (Xu)ATC 18--AIQL: Enabling Efficient Attack Investigation from System Monitoring Data. 
+针对APT攻击，监控数据进行攻击调查，但是现有的数据库无法快速有效查询。本系统提供了新的数据存储结构、用于攻击调查的查询语言、优化的执行查询的引擎。
 Usenix Security 17--{MPI}: Multiple perspective attack investigation with semantic aware execution partitioning
+传统审计技术会产生大量不准确的因果关系图，影响空间和精度。MPI基于高级任务进行分区，生成更少的单元和依赖图。
 ATC 18--Kernel-Supported Cost-Effective Audit Logging for Causality Tracking
+日志在系统中的开销在产生的过程中，传输、存储已经产生。为了提升效率，在内核中设计二级缓存，在不影响取证调查的情况下，防止生成冗余情报。
 Usenix Security 19--SAQL: A Stream-based Query System for Real-Time Abnormal System Behavior Detection
-HPCA 18--Steal but No Force: Efficient Hardware Undo+Redo Logging for Persistent Memory Systems
+应对安全攻击的攻击调查，时间非常关键，实时地对大规模数据进行及时的异常检测面临困难，再次提出基于流的查询系统，它以企业中的多个主机聚合的实时事件提要作为输入，并提供了一个异常查询引擎来查询事件提要，以根据指定的异常来识别异常行为。
 SIGMOD 18--Navigating the Data Lake with Datamaran: Automatically Extracting Structure from Log Datasets
-ccs 14--VerSum: Verifiable Computations over Large Public Logs
+企业积累的大量日志数据成为数据池。未使用、非结构化和未解释的状态，随着它们的积累，使得它们变得不可管理。提出一个从半结构化日志数据集中提取结构的工具，不需要人工监视，将结构化部分（根据不同部分的字段和记录端点得到统一的部分日志，并提取其中的值进行结构化）从非结构化噪声或格式中分离出来。
 Usenix security 09-- Efficient Data Structures for Tamper-Evident Logging
-OSDI 02--ReVirt: Enabling Intrusion Analysis through Virtual-Machine Logging and Replay（目标操作系统移动到虚拟机）
+日志的真实可用性在很多场景是强需求。开发了一种新的篡改明显的日志设计，它基于一种新的Merkle树数据结构，允许日志记录器生成其正确行为的简洁证明。提出了Merkle aggregation， 它允许以可验证的方式将这些属性从叶子聚合到树的根。
+OSDI 02--ReVirt: Enabling Intrusion Analysis through Virtual-Machine Logging and Replay （目标操作系统移动到虚拟机）
+ReVirt通过将目标操作系统移动到虚拟机并在虚拟机下面进行日志记录，从而消除了对目标操作系统的依赖。还能够重播虚拟机的完整的逐条指令执行，即使执行依赖于非确定性事件。日志程序与操作系统在不同的域中运行，修改主机内核来记录虚拟机。
 OSDI 12--Be Conservative: Enhancing Failure Diagnosis with Proactive Logging
-SOSP 13--Tango: Distributed Data Structures over a Shared Log
-SOSP 17--Scaling a file system to many cores using an operation log
+在系统的调查中发现超过一半的故障中没有记录可检测到的错误，缺少故障相关的错误会导致时候调查费时费力。自动化在代码中插入主动日主语句，以强化故障诊断。它通过在源代码中机械地搜索表5中的七个通用异常模式来识别潜在的异常。
 ATC 11--In-situ MapReduce for Log Processing
+处理商用点击日志，机器和日志规模巨大。转移数据到单独的HDFS集群运行MapReduce作业，有IO和时间上的巨大花费求。分析转移到日志服务器本身的就地MapReduce(iMR)体系结构可节约上述，但服务器又其他任务，分析资源受限延迟不可保障。使用连续MapReduce model，有损MapReduce 处理，架构上分布式流处理器、子窗口或者panes。
 ATC 15--Log2: A Cost-Aware Logging Mechanism for Performance Diagnosis
+开发人员预先定义了允许日志记录的资源预算（日志带宽），在运行时日志系统决定是否进行日志记录。两段过滤：一评分（如差异性）删除条目，二评分动态调整输出。
 NDSS 18--MCI: Modeling-based Causality Inference in Audit Logging for Attack Investigation
+提出解决因果分析导致的依赖爆炸，主要依靠插装和修改内核增强收集。不用其他额外操作，直接对日志进行建模，each model is a sequence of system calls that have inter-dependences, some of them caused by memory operations and hence implicit at the system call level.
+NDSS 18--Towards a Timely Causality Analysis for Enterprise Security
+日志因果分析的时效性要求高，之前却被忽视。提出前向后向因果追踪，并在攻击图的构建调查中引入优先级（基于因果关系图的稀疏性和拓扑特征计算因果关系优先级），时间上提升两个数量级。
 ACSAC 15--Accurate, Low Cost and Instrumentation-Free Security Audit Logging for Windows
+在ETW的基础上，可以非常低的运行时开销收集系统级事件。系统不需要任何应用程序检测。对事件和堆栈帧进行分析并划分为单元，以支持精确的因果分析。同时也能提高收集效率，减少空间消耗。
 ASPLOS 16--CloudSeer: Workflow Monitoring of Cloud Infrastructures via Interleaved Logs
+云基础设施的监控涉及多个分布式服务组件，具有挑战性。本CloudSeer采用轻量级地非侵入方式，先为每个管理任务的工作流构建一个自动机，再根据一组自动机检查日志消息。对于每个潜在的问题，CloudSeer输出必要的上下文信息。
+VLDB 18--Scalable Database Logging for Multicores
+中央日志存储中的缓冲日志最近面临着一个严重的多核可伸缩性问题，日志刷新受到同步I/O延迟的挑战。设计并实现了一种快速且可伸缩的日志记录方法ELEDA，它可以平稳地将大量事务日志从易失性内存转移到稳定的存储，而不会带来原子性和持久性的风险。ELEDA的核心是一个高度并发的数据结构
+ccs 13--LogGC: Garbage Collecting Audit Log
+审计日志的取证的一个关键挑战是生成的日志文件的大小。一个关键的观察:审计日志中的许多事件条目可以删除，而不会影响将来的法医分析(如因果图)。开发了一个基本的GC算法，它直接作用于审计日志，获取当前的审计日志并生成一个新的和减少的审计日志。
+Secutiry 15--Vulnerability Disclosure in the Age of Social Media: Exploiting Twitter for Predicting Real-World Exploits
+Twitter传播的漏洞信息，有利于我们快速排除现实世界中还没被利用的漏洞。设计了基于Twitter的攻击检测器，有利于即时响应。
+Usenix Security 19--Towards the Detection of Inconsistencies in Public Security Vulnerability Reports
+CVE和NVD积累了大量的数据，有效却难以使用。提出了一个自动化的系统VIEM来检测完全标准化的NVD数据库与非结构化CVE描述及其引用的漏洞报告之间的不一致信息。用于从非结构化文本中提取易受攻击的软件名称和易受攻击的版本。我们将自定义设计引入基于深度学习的命名实体识别(NER)和关系提取(RE)中，使VIEM能够根据句子结构和上下文识别以前不可见的软件名称和版本。
 
 
 异常检测
 (Xu)ATC 18--AIQL: Enabling Efficient Attack Investigation from System Monitoring Data. 
-Usenix Security 19--SAQL: A Stream-based Query System for Real-Time Abnormal System Behavior Detection
+Usenix Security 19--SAQL: A Stream-based Query System for Real-Time Abnormal System Behavior Detection.
+应对安全攻击的攻击调查，时间非常关键，实时地对大规模数据进行及时的异常检测面临困难，再次提出基于流的查询系统，它以企业中的多个主机聚合的实时事件提要作为输入，并提供了一个异常查询引擎来查询事件提要，以根据指定的异常来识别异常行为。
 S&P 19-HOLMES: Real-time APT Detection through Correlation of Suspicious Information Flows
-ATC 18--AIQL: Enabling Efficient Attack Investigation from System Monitoring Data. 
+HOLMES是一个实时的APT检测系统，它与战术、技术和程序相关，可以用于执行每个APT阶段。HOLMES生成一个高层图，它实时地总结了攻击者的步骤。
 Usenix Security 17--{MPI}: Multiple perspective attack investigation with semantic aware execution partitioning
+传统审计技术会产生大量不准确的因果关系图，影响空间和精度。MPI基于高级任务进行分区，生成更少的单元和依赖图。
 NDSS 18--Fear and Logging in the Internet of Things
+家庭场景物联网攻击调查很重要，日志的设备隔离和设备的各异导致困难。提出了ProvThings，一种以平台为中心的方法来实现物联网中的集中审计，它对物联网应用程序和设备api执行高效的自动化检测得到数据，推断依赖关系重建事件，最终可面向消费者。
 NDSS 18--MCI: Modeling-based Causality Inference in Audit Logging for Attack Investigation
+提出解决因果分析导致的依赖爆炸，主要依靠插装和修改内核增强收集。不用其他额外操作，直接对日志进行建模，each model is a sequence of system calls that have inter-dependences, some of them caused by memory operations and hence implicit at the system call level.
 ATC 18--Troubleshooting Transiently-Recurring Errors in Production Systems with Blame-Proportional Logging
+生产系统中暂时性重复问题，很少发生难以检测排除。使用轻量级触发器来识别问题的第一次出现，然后使用它的递归执行过失比例日志记录。
 NDSS 18--Towards a Timely Causality Analysis for Enterprise Security
+日志因果分析的时效性要求高，之前却被忽视。提出前向后向因果追踪，并在攻击图的构建调查中引入优先级（基于因果关系图的稀疏性和拓扑特征计算因果关系优先级），时间上提升两个数量级。
 FSE-ESEC 18--CloudRaid: Hunting Concurrency Bugs in the Cloud via Log-Mining（检测bug）
+分布式并发bug难检测且代价大。提出充分测试的消息排序（部分乱序）可能暴露错误，翻转每一对消息，评估是否可能并行，来测试并行bug。
 FSE-ESEC 18--Identifying Impactful Service System Problems via Log Analysis
+日志数据量大且有分类需求，聚类以及手工验证困难。提出新的层叠聚类算法，通过迭代采样、聚类和匹配日志序列，在保持较高精度的同时，大大节省了聚类时间。
 FSE-ESEC 18--Using Finite-State Models for Log Differencing（多日志Diff）
-VLDB 18--Scalable Database Logging for Multicores
-ccs 13--LogGC: Garbage Collecting Audit Log
+探究不同版本系统的差异性，可以分析已经消除或引入的bug或新功能，以及进行恶意软件的分析。通过日志建立优先状态模型，比较软件版本的差异性。使用2KDIFF比较两个日志之间和nKDIFF输出FSM比较多个日志
 ccs 14--POSTER: Scanning-free Personalized Malware Warning System by Learning Implicit Feedback from Detection Logs
+传统的反恶意软件系统通过扫描文件系统来检测此类恶意软件，并为用户提供安全的环境。缺点:耗时;某些设置未检测到;警告系统可以在不扫描的情况下检测到未受感染的恶意软件，并具有很高的感染风险。提出了一种基于检测日志和协同过滤(CF)算法的恶意软件检测方法。
 ccs 17--DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning
-S&P 03--Defending Anonymous Communications Against Passive Logging Attacks
+数据众多，且异常检测越来越有挑战性。提出利用长短时记忆(LSTM)对系统日志进行自然语言序列建模的深度神经网络模型DeepLog。使用日志键和其他度量值，小数据训练，可实时反馈调整。
 SOSP 09--Detecting Large-Scale System Problems by Mining Console Logs
+控制台日志未能充分运用，其特点large、 unstructed，需要自动化处理检测异常。结合代码，将控制台日志结构化，选取时间和对象的特征，进行异常检测。代码生成模板，tostring函数填入，与log进行检索得到structured log，时间特征和对象识别建立向量，pca异常检测，将结果可视化为可理解的判断树结构
 ATC 10--Mining Invariants from Console Logs for System Problem Detection
-www 19-- Navigating the Maze of Wikidata Query Logs
-ASCAC 16-- HERCULE: Attack Story Reconstruction via Community Discovery on Correlated Log Graph
+一种用于异常检测的非结构化日志分析技术，提出了一种自动发现日志中程序不变量的新算法。程序不变量可以从系统的各个方面定义，包括系统度量值(例如CPU和网络利用率)和程序变量（如job id），对其计数建立线性关系检测异常。
+www 19--Navigating the Maze of Wikidata Query Logs
+分析Wikidata的查询日志，在给定一个查询的情况下，找到一些在结构上与给定查询相似的查询。
+ASCAC 16--HERCULE: Attack Story Reconstruction via Community Discovery on Correlated Log Graph
+攻击网络攻击由多个阶段组成，难以察觉，传统分析系统针对单一类型进行发掘，但是难以理解复杂多阶段攻击的完整攻击过程。HERCULE通过在多个轻量级日志之间关联日志条目来构建多维加权图，从多个阶段的网络攻击频谱中重建攻击行为。
 ACSAC 15--Accurate, Low Cost and Instrumentation-Free Security Audit Logging for Windows
+在ETW的基础上，可以非常低的运行时开销收集系统级事件。系统不需要任何应用程序检测。对事件和堆栈帧进行分析并划分为单元，以支持精确的因果分析。同时也能提高收集效率，减少空间消耗。
 ACSAC 13--Beehive: Large-Scale Log Analysis for Detecting Suspicious Activity in Enterprise Networks
+系统为了防止攻击使用各种安全软件，来源不同生成日志差异大。本文Beehive对大型企业中各种安全产品产生的脏日志数据进行自动挖掘和提取知识。
 ASPLOS 16--CloudSeer: Workflow Monitoring of Cloud Infrastructures via Interleaved Logs
+云基础设施的监控涉及多个分布式服务组件，具有挑战性。本CloudSeer采用轻量级地非侵入方式，先为每个管理任务的工作流构建一个自动机，再根据一组自动机检查日志消息。对于每个潜在的问题，CloudSeer输出必要的上下文信息。
 Kdd 19--Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks
+提出了一个耦合递归神经网络模型JODIE，它可以学习用户和项目的嵌入轨迹。JODIE使用两个递归神经网络在每次交互时更新用户和项的嵌入。至关重要的是，JODIE还为用户/项目的未来嵌入轨迹建模。
 TDSC 11--Online Intrusion Alert Aggregation with Generative Data Stream Modeling
+警报聚合是入侵检测的一个重要子任务。提出了一种基于当前攻击态势的动态概率模型的在线警报聚合新技术。它基本上可以看作是一种估计模型参数的最大似然方法的数据流版本。
 Kdd 16--Ranking Causal Anomalies via Temporal and Dynamical Analysis on Vanishing Correlations
+在不变网络中，结点表示一个系统组件，边表示交互。在其中的结构和关系的变化对原因异常和关系诊断有重要意义。本文提出了一个基于网络扩散的框架来识别重要的因果异常并对其进行排序。进行故障推理。
 IJCAI 16--Entity Embedding-Based Anomaly Detection for Heterogeneous Categorical Events
+在异构事件的异常检测方面，提出了一种有原则的、统一的概率模型APE(通过概率两两交互和实体嵌入来检测异常)，它可以直接对事件的可能性建模。
 ICDCS 17--Real-time Detection of Illegal File Transfers in the Cloud
+云存储无法告知实际位置，限制信任。提出了一个非法文件传输检测框架，该框架不断监视云中的实时文件传输，能够检测潜在的非法传输。技术上是在云节点中进行数据存储安排时，对多个用户的位置首选项进行分类。我们将节点间的合法文件传输建模为加权图，然后将具有相似隐私偏好的数据项存储在同一区域的概率最大化。
 CoRR 14--Graph based anomaly detection and description: a survey
+提供一个通用的，全面的，结构化的概述，最先进的方法，异常检测的数据表示为图表。作为一个重要贡献，我们给出了在不同设置下分类的算法的一般框架:无监督与(半)监督方法，静态图与动态图，属性图与普通图。
 CCS 17--Detecting Structurally Anomalous Logins Within Enterprise Networks
+网络入侵会窃取有效凭证进行横向移动，使得使用字节序列的检测方法失效。本文开发了网络登录结构概念，采用一种改进的market-basket算法，通过自动提取一组登录模式，建立网络登录结构模型。最后使用异常检测方法来检测与企业网络登录结构不一致的恶意登录。
 CCS 15--Detecting Insider Threat from Enterprise Social and Online Activity Data
-Usenix Security 19--Towards the Detection of Inconsistencies in Public Security Vulnerability Reports
+为解决企业的内部威胁，试图通过对企业社会和员工网络行为异常行为的识别来发现内部威胁。从社会数据(包括电子邮件通信模式和cono -tent)和在线活动数据(如web浏览模式、电子邮件频率、文件和机器访问模式)中提取的特性。并使用孤立森林进行有效的异常检测。
 NDSS 19--A Systematic Framework to Generate Invariants for Anomaly Detection in Industrial Control Systems
+工控系统需要异常检测来应对攻击和运行风险。本文结合多种机器学习和数据挖掘技术，提出了一种新的框架，该框架旨在从集成电路操作数据日志中包含的信息系统地生成不变规则。
 Usenix Security 19--Reading the Tea Leaves: A Comparative Analysis of Threat Intelligence
+威胁情报目前被广泛研究用于避免被攻击，但是缺乏标准评估，使得预期用途有限。本文通过定义一组用于描述威胁情报数据题要的度量标准，并对其进行评估。
 IJCAI 2019--Heterogeneous Graph Matching Networks for Unknown Malware Detection
+传统恶意程序检测算法依赖签名，需要基于行为的方法却依赖训练样本，训练成本过高。提出了基于程序执行行为不变图模型的异构图匹配网络模型MatchGNet，该模型同时学习图的表示和相似度度量。
 Usenix Security 19--Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis
-Usenix Security 19--Devils in the Guidance: Predicting Logic Vulnerabilities in Payment Syndication Services through Automated Documentation Analysis
+针对物联网的网络攻击还尚不清晰，为此从蜜罐收集了大量现实攻击痕迹。发现现在的很多攻击和阻断都依据与漏洞报告，并且证明直接NLP生成签名可以有效检测。
 CCS 19--Poirot: Aligning Attack Behavior with Kernel Audit Records for Cyber Threat Hunting
-
+利用开源情报，依靠内核审计，分析系统实体时间的所有因果关系和信息流，将威胁捕获模型作为一个不精确的图形模式匹配问题。评估由CTI相关性构造的查询图与由内核审计日志记录构造的起源图之间的一致性。
+CCS 18--Tiresias: Predicting Security Events Through Deep Learning
+利用循环神经网络(RNNs)来预测系统中未来会发生的攻击。
